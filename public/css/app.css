@@ -1,0 +1,239 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+}
+
+/* Main container */
+.main-information-app {
+    margin: 2rem 5rem;
+    padding: 0 1.5rem;
+}
+
+/* Auction cards */
+.auction-div-app {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.auction-div-app:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.auction-div-app img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.auction-info-app {
+    width: 100%;
+    text-align: left;
+}
+
+.auction-info-app h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.auction-info-app p {
+    color: black;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Table styles */
+.auction-table {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+    table-layout: fixed;
+}
+
+.auction-table th {
+    padding: 1.5rem;
+    background: #f4f4f4;
+    color: black;
+}
+
+.auction-table th:first-child {
+    border-top-left-radius: 12px;
+    width: 25%; /* Featured column width */
+}
+
+.auction-table th:last-child {
+    border-top-right-radius: 12px;
+    width: 75%; /* Trending column width */
+}
+
+.auction-table td {
+    padding: 1.5rem;
+    vertical-align: top;
+}
+
+/* Featured auctions container */
+.featured-auctions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Trending auctions container */
+.trending-auctions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Pagination */
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    border-top: 1px solid #f4f4f4;
+}
+
+#premium-pagination,
+#featured-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+#premium-pagination span,
+#featured-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: black;
+}
+
+#premium-pagination span:hover,
+#featured-pagination span:hover {
+    background: #f4f4f4;
+    color: black;
+}
+
+#premium-pagination span.active,
+#featured-pagination span.active {
+    background: #f4f4f4;
+    color: black;
+    border-color: #f4f4f4;
+}
+
+/* Links */
+.text-decoration-a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Product Categories */
+.product-categories {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.category-item {
+    background: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.category-item:hover {
+    background: #f4f4f4;
+    color: black;
+}
+
+.premium-hammer{
+    border: 2px solid #FFD700;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5), 
+                0 2px 5px rgba(255, 165, 0, 0.3);
+    border-radius: 10px;
+}
+.premium-hammer:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px #FFD43B;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .trending-auctions-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .auction-div-app {
+        width: 100%;
+    }
+    
+    .auction-table th {
+        font-size: 1.25rem;
+    }
+    
+    .main-information-app {
+        margin: 2rem 1rem;
+        padding: 0;
+    }
+    
+    .trending-auctions-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.error-notification {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-notification.hidden {
+    opacity: 0;
+}
+
+.current-image {
+    width : 10em;
+    height : 10em;
+}
+
+.current-image-itemPage{
+    width : 25em;
+    height : 25em;
+}

@@ -1,0 +1,132 @@
+/* General Container */
+#watchlist-auctions {
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ccc; 
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    align-items: flex-start;
+    background: #f4f4f9; /* Light gray background for better readability */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Auction Card */
+.watchlist-auction {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background: #ffffff; /* White background for contrast */
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.watchlist-auction:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Auction Details */
+#auction-details-watchlist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#auction-details-watchlist .label {
+    background: #4a4a4a; /* Dark gray for labels */
+    border-radius: 20px;
+    color: #ffffff; /* White text for contrast */
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin-right: 10px;
+}
+
+#auction-details-watchlist .label:hover {
+    background: #333333; /* Even darker gray on hover */
+    transform: scale(1.05);
+}
+
+/* Remove Button */
+#remove-watchlist-button {
+    background: #ff6f61; /* Bright coral button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#remove-watchlist-button:hover {
+    background: #e63946; /* Deeper coral for hover */
+    transform: scale(1.1);
+}
+
+/* Header */
+#watchlist-header {
+    text-align: center;
+    font-style: italic;
+    font-size: 28px;
+    color: #333333; /* Dark gray for the header */
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4a4a4a; /* Dark gray underline */
+    letter-spacing: 2px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Auction Image */
+#auction-image-watchlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#auction-image-watchlist img {
+    width: 100px; /* Fixed image width */
+    height: 100px; /* Fixed image height */
+    border: 2px solid #4a4a4a; /* Dark gray border for visibility */
+    border-radius: 10%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    object-fit: cover; /* Ensure image stays square */
+}
+
+#auction-image-watchlist img:hover {
+    transform: scale(1.1);
+    border-color: #333333; /* Even darker gray on hover */
+}
+
+.error-notification {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-notification.hidden {
+    opacity: 0;
+}

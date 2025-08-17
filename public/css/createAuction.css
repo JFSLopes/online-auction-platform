@@ -1,0 +1,170 @@
+section.main-information {
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto; /* Center the section */
+    max-width: 600px; /* Limit the width for better readability */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Smooth scaling on hover */
+}
+
+section.main-information .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+section.main-information label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+section.main-information input,
+section.main-information textarea,
+section.main-information select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+section.main-information input:focus,
+section.main-information textarea:focus,
+section.main-information select:focus {
+    border-color: #007bff; /* Highlighted border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+    outline: none;
+}
+
+section.main-information textarea {
+    min-height: 100px; /* Make text area larger */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+section.main-information button.create-auction {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+section.main-information button.create-auction:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift on hover */
+}
+
+section.main-information button.create-auction:active {
+    background-color: #00408f;
+    transform: translateY(0); /* Reset on click */
+}
+
+.start-date, .end-date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+.start-date label, .end-date label {
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+.char-counter {
+    float: right;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.form-group textarea, 
+.form-group input[type="text"] {
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.photo-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.photo-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-notification {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-notification.hidden {
+    opacity: 0;
+}
+  
+.help-button {
+    position: absolute;
+    right: 5px;
+    top: 0; 
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+ 
+.help-button .tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.help-button .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.help-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

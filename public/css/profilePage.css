@@ -1,0 +1,475 @@
+/*------------------------Inormation-----------------------------------*/
+
+section.main-information {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10em;
+    padding: 20px;
+    background-color: #d3d3d3; 
+    border-radius: 10px;
+    transition: margin-left 0.2s ease; /* Smooth transition */
+    margin-bottom: 27em;
+    margin-top: 2em;
+}   
+
+/* Style for the buttons in a row */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: inherit;
+    border: 1px solid ;
+    padding: 10px;
+    border-radius: 10px;
+    
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 10px;
+    border-color: rgb(37, 37, 37);
+    display: flex;
+}
+
+button:hover {
+    background-color: var(--navbar-dark-primary);
+    color: white;
+    border-color: white;
+}
+
+button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+/* Show active section */
+.information-div,
+.active-bids-div,
+.items-won-div {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+
+
+/* Styling for headings */
+.information-div h4,
+.active-bids-div h4,
+.items-won-div h4 {
+    margin-bottom: 0.5rem;
+}
+
+
+/* Links inside sections */
+.active-bids-div a,
+.items-won-div a {
+    text-decoration: none;
+    color: var(--navbar-dark-primary);
+}
+
+/* Icons */
+.nav-icons {
+    width: 18em;
+    height: auto; 
+    padding-right: 0.5em;
+    padding-left: 0.8em; 
+    margin-right: 2em;
+}
+
+
+/* Active button state */
+button.active {
+    background-color: var(--navbar-dark-primary);
+    color: white;
+}
+
+.buttons-text{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.buttons-text-subtitle{
+    font-size: 1.5em;
+}
+
+.buttons-text-title{
+    font-size: 3em;
+}
+
+/* Style for the table to align placeholders under their respective categories */
+.user-information-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem; /* Space below the table */
+}
+
+.user-information-table th, 
+.user-information-table td {
+    text-align: left;
+    vertical-align: top; /* Ensures placeholder is below the category */
+    padding: 0.5rem;
+}
+
+.user-information-table th {
+    width: 30%; /* Adjust width as needed */
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #757575;
+    font-size: 1.5em;
+}
+
+.user-information-table td {
+    color: #555;
+    font-style: italic; /* Optional, to highlight placeholder text */
+    border-bottom: 1px solid #757575;
+    font-size: 1.4em;
+}
+
+/* Style for the button */
+.edit-profile-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 10em; 
+    height: 10em; 
+    border-radius: 100%; 
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.edit-profile-button img {
+    width: 70%; 
+    height: auto;
+}
+
+.edit-profile-button:hover {
+    background-color: #9abadb;
+    transform: scale(1.1); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    
+}
+
+/* To ensure proper positioning */
+.information-div {
+    position: relative; /* Allows the button to position correctly */
+    padding: 2rem; /* Adds padding inside the div */
+}
+   
+
+.information-div.active,
+.active-bids-div.active,
+.items-won-div.active {
+    display: block; /* Only the active section will be visible */
+}
+
+#nav-toggle:checked ~ section.main-information {
+    margin-left: calc(var(--navbar-width - min) + 2rem); 
+}
+
+/* Add smooth transitions to navbar for consistency */
+#nav-header,
+#nav-content,
+#nav-footer {
+    transition: width 0.2s ease; /* Matches the section's transition */
+}
+
+.active-bids-div a{
+    color: black;
+}
+
+.items-won-div a{
+    color: black;
+}
+
+.items-won-table {
+    width: 100%; /* Full-width table */
+    border-collapse: collapse; /* Remove gaps between cells */
+    margin-top: 20px; /* Add space above the table */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border for the table */
+    border-radius: 8px;
+    overflow: hidden; /* Clip any overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.items-won-table thead {
+    background-color: #d3d3d3; /* Header background color */
+    text-align: left;
+}
+
+.items-won-table th,
+.items-won-table td {
+    padding: 12px 15px; /* Consistent padding for cells */
+    border: 1px solid #ddd; /* Border between rows and columns */
+    font-size: 1rem;
+}
+
+.items-won-table th {
+    font-weight: bold;
+    color: #333; /* Darker color for headers */
+}
+
+.items-won-table td {
+    color: #555;
+}
+
+.items-won-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.items-won-table tbody tr:hover {
+    background-color: #e6f7ff; /* Highlight on hover */
+    cursor: pointer;
+}
+
+.active-bids-table {
+    width: 100%; /* Full-width table */
+    border-collapse: collapse; /* Remove gaps between cells */
+    margin-top: 20px; /* Add space above the table */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border for the table */
+    border-radius: 8px;
+    overflow: hidden; /* Clip any overflow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.active-bids-table thead {
+    background-color: #d3d3d3; /* Header background color */
+    text-align: left;
+}
+
+.active-bids-table th,
+.active-bids-table td {
+    padding: 12px 15px; /* Consistent padding for cells */
+    border: 1px solid #ddd; /* Border between rows and columns */
+    font-size: 1rem;
+}
+
+.active-bids-table th {
+    font-weight: bold;
+    color: #333; /* Darker color for headers */
+}
+
+.active-bids-table td {
+    color: #555;
+}
+
+.active-bids-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.active-bids-table tbody tr:hover {
+    background-color: #e6f7ff; /* Highlight on hover */
+    cursor: pointer;
+}
+
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.5px solid black;
+    margin: 0.5em 0 1em 0;
+}
+
+.profile-nav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.profile-nav button{
+    margin: 0 1em 0 1em;
+    border: none;
+    font-size: 1em;
+}
+
+
+.profile-nav button:active {
+    background-color: #460303;
+    transition: background-color 0.1s ease;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push content to edges */
+    background-color: inherit;
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between profile pic and details */
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #727070;
+    object-fit: cover;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-role, .user-contact, .user-email, .user-rating {
+    margin: 0;
+    font-size: 1rem;
+    color: #727070;
+}
+
+.buttons-div {
+    display: flex;
+    flex-direction: column; /* Align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-left: auto; /* Push buttons to the far right */
+    align-items: center; /* Center align buttons vertically */
+}
+
+.buttons-div button {
+    background-color: #e2e6e2;
+    color: #727070;
+    border: none;
+    padding: 8px 15px; /* Adjusted padding for compact size */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 13em;
+    height: auto;
+}
+
+.buttons-div button:hover {
+    background-color: #460303;
+    color: #fff; /* Change text color on hover */
+    transform: scale(1.05);
+}
+.user-auctions , .user-bids{
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1em;
+}
+
+.auction-div , .bid-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 30%;
+}
+
+.user-auctions img , .user-bids img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.profile-reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.review{
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #727070;
+}
+
+.profile-Watchlist{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.Watchlist-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.item-auction-icon{
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.favourite-icon{
+    width: 3em;
+    height: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.router{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forms{
+    display: flex;
+    gap: 2em;
+}
+
+.forms form{
+    font-size: 1.5em;
+}
+
+.error-notification {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-notification.hidden {
+    opacity: 0;
+}

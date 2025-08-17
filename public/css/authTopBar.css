@@ -1,0 +1,408 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    padding-bottom: 1rem;
+}
+
+.navbar > * {
+    padding-top: 2em;
+}
+
+/* Line Container */
+.line-top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+/* Logo Section */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    margin-right: 2rem;
+    mix-blend-mode: difference;
+    background-color: white;
+    cursor: pointer;
+}
+
+.logoLetters {
+    margin-left: 5rem;
+    font-size: 3.5em;
+    cursor: pointer;
+
+}
+
+/* Search Bar */
+.search-container {
+    height: 70px;
+    width: 70px;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: width 0.5s, outline 0.5s;
+    outline: 1px solid transparent;
+}
+
+.search-container:hover {
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 2px 2px 0 #d6d9e2;
+    width: 300px;
+}
+
+.search-input {
+    flex: auto;
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    margin-inline: 1rem;
+    opacity: 0;
+    width: 0;
+    transition: opacity 0.5s, width 0.5s ease-in-out;
+    border: none;    
+}
+
+.search-container:hover .search-input {
+    opacity: 1;
+    width: 100%;
+    padding-top: 1.5em;
+    border: none;
+}
+
+.search-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    height: 100%;
+    color: #fff;
+    background-color: #a7a7a7;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    cursor: pointer;
+    flex: none;
+    margin-bottom: 0;
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    padding-right: auto;
+    margin-left: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+    margin-left: 1em;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* Icons Section */
+.icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.2s ease;
+}
+
+.icon-link:nth-child(3){
+    padding-right: 1em;
+}
+
+.icon-link:hover .icon {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+
+/*-------------------------*/
+
+/* Define hover-like styles for the search-container */
+.hover-effect {
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 2px 2px 0 #d6d9e2;
+    width: 300px;
+    transition: width 0.5s, outline 0.5s;
+}
+
+.hover-effect .search-input {
+    opacity: 1;
+    width: 100%;
+    padding-top: 1.5em;
+    transition: opacity 0.5s, width 0.5s ease-in-out;
+}
+
+.sign-up-link{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 1em;
+}
+
+.login-button{
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#last-icon{
+    padding-left: 1.5em;
+    padding-right: 5em;
+}
+
+.home-link{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Container for the balance icon and tooltip */
+.balance-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Buttons styling */
+.buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.deposit {
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.withdraw {
+    font-size: 1em;
+    background-color: #333;
+    color: white;
+}
+
+.deposit:hover, .withdraw:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.notifications-container, .balance-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-tooltip,
+.balance-tooltip {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: none;
+    text-align: center;
+    z-index: 1000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification-tooltip.show, .balance-tooltip.show {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* You can add more specific styles based on whether the tooltip has been clicked or not */
+.notification-tooltip.clicked, .balance-tooltip.clicked {
+    border-color: #007bff;
+    background-color: #e6f0ff;
+}
+
+
+
+/* Remove default list styles */
+ul.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification {
+    margin-bottom: 10px;
+}
+
+.notification-link {
+    text-decoration: none;
+    color: inherit; /* Ensures text color is inherited */
+}
+
+/* Notification box styling */
+.notification-box {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Add a blue box for clicked (read) notifications */
+.notification-box.clicked {
+    border-color: #007bff;
+    background-color: #e6f0ff;
+}
+
+/* Notification title */
+.notification-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Notification content styling */
+.notification-content {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Notification date styling */
+.notification-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Hover effect for notification box */
+.notification-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blue dot indicating unread notifications */
+.blue.dot {
+    width: 8px;
+    height: 8px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+#logout-button-topbar{
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#logout-button-topbar:hover{
+    color: #007bff;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#login-button{
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 6em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#login-button:hover{
+    color: #007bff;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.error-notification {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-notification.hidden {
+    opacity: 0;
+}

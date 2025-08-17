@@ -1,0 +1,168 @@
+/* General styling for the edit auction section */
+section.edit-auction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    background-color: #f4f4f9; /* Subtle background */
+    min-height: 100vh; /* Full height */
+}
+
+section.edit-auction .edit-auction-section {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 600px; /* Constrain the width */
+    transition: transform 0.2s ease;
+}
+
+section.edit-auction .edit-auction-section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Form heading */
+section.edit-auction h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form group styling */
+section.edit-auction .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+section.edit-auction .form-group label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+section.edit-auction .form-group input,
+section.edit-auction .form-group textarea,
+section.edit-auction .form-group select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+section.edit-auction .form-group input:focus,
+section.edit-auction .form-group textarea:focus,
+section.edit-auction .form-group select:focus {
+    border-color: #007bff; /* Highlighted border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+    outline: none;
+}
+
+section.edit-auction .form-group textarea {
+    min-height: 100px; /* Larger default size */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Button styling */
+section.edit-auction .edit-auction-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+section.edit-auction .edit-auction-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+section.edit-auction .edit-auction-button:active {
+    background-color: #00408f; /* Even darker on click */
+    transform: translateY(0); /* Reset */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    section.edit-auction .edit-auction-section {
+        padding: 1.5em;
+    }
+
+    section.edit-auction h2 {
+        font-size: 1.3rem;
+    }
+
+    section.edit-auction .edit-auction-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+.help-icon {
+    position: absolute;
+    right: 5px;
+    top: 0; 
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    text-align:center;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+ 
+.help-icon .tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.help-icon .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.help-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.error-notification {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.error-notification.hidden {
+    opacity: 0;
+}
